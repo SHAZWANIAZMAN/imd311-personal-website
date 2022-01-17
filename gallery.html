@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+      .row 
+        {
+          margin: 8px -12px;
+        }
+      /* Add padding between each column */
+      .row,
+      .row > .column 
+        {
+          padding: 5px;
+        }
+      /* Create three equal columns that floats next to each other */
+      .column
+        {
+          float: left;
+          width: 33.33%;
+          display: none; /* Hide all elements by default */
+        }
+      /* Clear floats after rows */
+      .row:after 
+        {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      /* Content */
+      .content 
+        {
+          background-color: #cec8e4;
+          padding: 6px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      /* The "show" class is added to the filtered elements */
+      .show 
+        {
+          display: block;
+        }
+      /* Style the buttons */
+      .btn 
+        {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: #fdcfb3;
+          cursor: pointer;
+          font-weight: bold;
+          font-family: 'Poppins';
+        }
+      .btn:hover 
+        {
+          background-color: #cec8e4;
+          color: white;
+          font-weight: bold;
+        }
+      .btn.active 
+        {
+          background-color: #cec8e4;
+          color: black;
+          font-weight: bold;
+        }
+      h4
+        {
+          text-align: center;  
+          margin-top: 20px;
+        }
+      /* Adjust the filtering buttons */
+      .myBtnContainer
+      {
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+          text-align: center;
+      }
+      @media screen and (max-width: 900px) 
+      {
+      /* Make the picture appear in full size when the screen become small */
+      .column 
+      {
+          width: 100%;
+      }
+      }
+    </style>
+  <body>
+    <h2>Gallery</h2>
+      <!--Button filtering-->
+      <div class="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('picture of myself')"> Picture of Myself</button>
+        <button class="btn" onclick="filterSelection('my family')"> My family</button>
+        <button class="btn" onclick="filterSelection('video and audio')">Business videos and audios used</button>
+      </div>
+
+      <!--Portfolio gallery grid-->
+      <!--Inserting picture in polaroid-->
+      <div class="row">
+        <div class="column picture of myself">
+          <div class="content">
+            <img src="images/picture_of_me(1).jpeg" alt="Picture of me" title="Picture when I was 1 years old "style="width: 100%" class="responsive">
+              <h4>1 years old me &#128103</h4>  
+          </div>
+        </div>
+        <div class="column picture of myself">
+          <div class="content">
+            <img src="images/picture_of_me(2).jpeg" alt="Picture of me" title="Picture when I was 2 years old" style="width: 100%" class="responsive">
+              <h4>2 years old me &#128103</h4>
+            </div>
+        </div>
+        <div class="column picture of myself">
+          <div class="content">
+            <img src="images/picture_of_me(3).jpeg" alt="Picture of me" title="Current picture of me" style="width: 100%" class="responsive" >
+              <h4>Current picture of me &#128105</h4>
+          </div>
+        </div>
+        <div class="column picture of myself">
+          <div class="content">
+            <img src="images/picture_of_me(4).jpg" alt="Picture of me" title="Current picture of me" style="width: 100%" class="responsive" >
+              <h4>Current picture of me &#128105</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="images/picture_of_my_father.jpeg" alt="father" title="My father" style="width:100%">
+              <h4>My father &#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="images/picture_of_my_mother.jpeg" alt="mother" title="My mother" style="width:100%">
+            <h4>My mother &#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="images/picture _of_my_brother_haikal.jpeg" alt="brother" title="My brother" style="width:100%">
+            <h4>My brother &#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="images/picture_of_my_younger_brother_wafiy.jpeg" alt="younger brother" title="My younger brother" style="width:100%">
+              <h4>My younger brother &#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="images/picture_of_my_family.jpg" alt="Picture of us" title="family picture" style="width:100%">
+              <h4>Picture of us &#x1F495</h4>
+          </div>
+        </div>
+
+      <!--Div tag to make the video in one line, otherwise it will appear extra space between the last pictures polaroids and videos !Important! -->
+      </div>
+
+        <!--Insert video-->
+        <!--Video original/made by me-->
+        <div class="column video and audio">
+          <video width="500" height="500" controls>
+            <source src="video/unboxing_planner2022.mp4" type="video/mp4" alt="Video of me unboxing Syabab planner">
+            <source src="video/unboxing_planner2022.mp4" type="video/ogg" alt="Video of me unboxing Syabab planner">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="column video and audio">
+          <video width="500" height="500" controls>
+            <source src="video/planner2022.mp4" type="video/mp4" class="center" alt="Video of me getting planner stocks and packing order Syabab planner 2022">
+            <source src="video/planner2022.mp4" type="video/ogg" class="center" alt="Video of me getting planner stocks and packing order Syabab planner 2022">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!--Insert audio-->
+        <!--Audio from LuKrembo channel on YouTube (but there is no copyright music/free to use)-->
+        <div class="column video and audio">
+          <audio controls>
+            <source src="audio/biscuit_music.mp3" type="audio/ogg" alt="Biscuit aesthetic songs in video 1">
+            <source src="audio/biscuit_music.mp3" type="audio/mpeg" alt="Biscuit aesthetic songs in video 1">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!--Audio from Chillpeach channel on YouTube (but there is no copyright music/free to use)-->
+        <div class="column video and audio">
+          <audio controls>
+            <source src="audio/swipesy_cakewalk_cute_music.mp3" type="audio/ogg" alt="Swipesy cakewalk songs in video 2">
+            <source src="audio/swipesy_cakewalk_cute_music.mp3" type="audio/mpeg" alt="Swipesy cakewalk songs in video 2">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+      <!--Scripting for button filtering-->
+      <script>
+        filterSelection("")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        // Show filtered elements //
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);    
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        // Add active class to the current button (highlight it) //
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = document.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+      </script>
+  </body>
+</html>
+  
+   

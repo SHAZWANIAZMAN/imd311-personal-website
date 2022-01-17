@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biodata</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <style>
+        *{
+          box-sizing: border-box;
+        }
+      /* Adjusting the width and position of polaroid */
+      .wrapper 
+        {
+          width: 100%;
+          text-align: center;
+        }
+      /* Style the polaroid */
+      .polaroid 
+        {
+          background: #cec8e4;
+          padding: 1rem;
+          box-shadow: 0 0.2rem 1.5rem rgba(0,0,0,0.2);
+        }
+      /* Adjust the images inside polaroid */
+      .polaroid > img
+        {
+          max-width: 100%;
+          height: auto;
+        }
+      /* Adjust the width and transition of polaroids */
+      .item 
+        {
+          width: 30%;
+          display: inline-block;
+          margin-top: 0rem;
+        }
+      /* Adjust the transform and transition of the polaroids */
+      .item:nth-of-type(4n+1) 
+        {
+          transform: scale(0.8, 0.8) rotate(2deg);
+          transition: all 0.35s;
+        }
+      .item:nth-of-type(4n+2) 
+        {
+          transform: scale(0.8, 0.8) rotate(-2deg);
+          transition: all 0.35s;
+        }
+      .item:nth-of-type(4n+3) 
+        {
+          transform: scale(0.8, 0.8) rotate(2deg);
+          transition: all 0.35s;
+        }
+      /* Adjust the effects when point the mouse to the polaroids */
+      .item:hover 
+        {
+          filter: none;
+          transform: scale(1, 1) rotate(0deg);
+          transition: all 0.35s;
+        }
+      /* Table for biodata */
+      table, th, td
+        {
+          width: 80%; 
+          margin-left: auto; 
+          margin-right: auto; 
+          margin-top: 35px;
+          border: 1px solid black;
+          border-collapse: separate;  
+        }
+      th
+        {
+          background-color: #cec8e4;
+          color: black;
+          width: 50%;    
+        }
+      th, td  
+        {
+          padding: 10px;
+        }
+      td
+        {
+          text-align: left;
+          background-color: #fdcfb3;   
+        }
+      td:hover
+        {
+          background-color: #f9f7e8;
+        }
+      /* Side by side images */
+      .column 
+        {
+          float: left;
+          width: 33.33%;
+          padding: 5px;
+        }
+      .row::after 
+        {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      .content 
+        {
+          padding: 0 15px;
+          display: none;
+          overflow: hidden;
+        }
+      p
+        {
+          line-height: 1.5;
+          font-size: 14px;
+          text-indent: 50px ;
+          text-align: justify;
+        }
+      ul li
+        {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      /* Adjust the skills container */
+      .container 
+        {
+          width: 80%;
+          background-color: #cec8e4;
+          margin-left: auto; 
+          margin-right: auto; 
+        }
+      /* Adjust the skills texts */
+      .skills
+        {
+          text-align: center;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          color: black;
+          font-weight: bold;
+        }
+      /* First skill */
+      .creativity 
+        {
+          width: 90%; 
+          background-color: #fdcfb3;
+        }
+      /* Second skill */
+      .teamwork 
+        {
+          width: 85%; 
+          background-color: #fdcfb3;
+        }
+      /* Third skill */
+      .problemsolving 
+        {
+          width: 80%; 
+          background-color: #fdcfb3;
+        }
+      /* Fourth skill */
+      .communication 
+        {
+          width: 75%; 
+          background-color: #fdcfb3
+        }
+      @media screen and (max-width: 900px) 
+        {
+      /* Make the polaroid and images look full size in straight line when the screen become smaller  */
+      .item 
+        {
+          width: 100%;
+        }
+      .column 
+        {
+          width: 100%;
+        }
+        }
+    </style>
+  </head> 
+
+  <body>
+    <!--Table with rowspan-->
+    <h2>My Biodata</h2>
+      <div class="wrapper">
+          <div class="item">
+            <div class="polaroid"><img src="images/picture_of_me(2).jpeg" title="Picture of Myself 1" alt="Picture of myself">
+            </div>
+          </div>
+          <div class="item">
+            <div class="polaroid"><img src="images/picture_of_me(3).jpeg" title="Picture of Myself 2" alt="Picture of myself">
+            </div>
+          </div>
+          <div class="item">
+            <div class="polaroid"><img src="images/picture_of_me(4).jpg" title="Picture of Myself 3" alt="Picture of myself">
+            </div>
+          </div>
+      </div>  
+    
+    <!--Table with rowspan-->
+    <table style="width:80%; margin-left: auto; margin-right: auto; margin-top: 35px">
+      <tr>
+          <th>Name</td>
+          <td>Nur Shazwani Binti Azman</td>
+      </tr>
+      <tr>
+          <th>Age</th>
+          <td>21 years old</td>
+      </tr>
+      <tr>
+          <th>Nationality</th>
+          <td>Malaysia</td>
+      </tr>
+      <tr>
+          <th>Religion</th>
+          <td>Islam</td>
+      </tr>
+      <tr>
+          <th>Races</th>
+          <td>Malay</td>
+      </tr>
+      <tr>
+          <th>Date of Birth</th>
+          <td>5 September 2001</td>
+      </tr>
+      <tr>
+          <th>Place of Birth</th>
+          <td>Johor Bahru, Johor</td>
+      </tr>
+      <tr>
+          <th>Home Address</th>
+          <td>Kelana Jaya, 47301 Petaling Jaya, Selangor</td>
+      </tr>
+      <tr>
+          <th rowspan="2">Favorite drink</th>
+          <td>Starbucks Matcha Tea Lattle</td>
+      </tr>
+      <tr>
+          <td>Starbucks Caramel Frappucino</td>
+      </tr>
+      <tr>
+          <th rowspan="2">Favorite food</th>
+          <td>Japanese Food (Sushi)</td>
+      </tr>
+      <tr>
+          <td>Western Food (Steaks)</td>
+      </tr>
+      <tr>
+          <th>Number of family members</th>
+          <td>5 (include me)</td>
+      </tr>
+      <tr>
+          <th>Status inside family</th>
+          <td>I am the eldest daughter</td>
+      </tr>
+      <tr>
+          <th>Number of siblings</th>
+          <td>2 brothers (exclude me)</td>
+      </tr>
+      <tr>
+        <th>Education status</th>
+        <td>Diploma-level students</td>
+    </tr>
+    </table>
+    <br>
+
+    <h2>My Hobby</h2>
+      <!--Side by Side Images-->
+      <div class= "row">
+          <div class= "column">
+            <img src="images/reading.jpg" title="Books image credit to @Sixteen Miles Out" alt="Books image credit to @Sixteen Miles Out" style="width: 100%">
+          </div>
+          <div class= "column">
+            <img src="images/colouring.jpg" title="Colouring image credit to @Adeolu Eletu" alt="Colouring image credit to @Adeolu Eletu" style="width: 100%">
+          </div>
+          <div class= "column">
+            <img src="images/business.jpg" title="Business image credit to @Alexandru-Bogdan Ghita" alt="Business image credit to @Alexandru-Bogdan Ghita" style="width: 100%">
+          </div>
+      </div>
+
+      <!--Images from Unsplash-->
+      <p style="text-align: center; text-indent: 0%; font-weight: bold; font-style: italic; font-size: 14px">Credit to: @Sixteen Miles out, @Adeolu Eletu and @Alexandru-Bogdan Ghita from Unsplash</p>      
+    
+      <!--Header, paraghaph and unordered lists from different types-->
+      <h3>Reading</h3>
+      <p>My first hobby is that I enjoy reading books when I have free time. The genre of books that I enjoy reading is the romantic, inspirational, mystery and poetry genre. One of my favourite books of the romance genre is It Ends With Us by Colleen Hoover which is about an independent woman named Lily who meets the stubborn man named as Ryle Kincaid, and falls in love with him. Meanwhile, I also enjoy reading motivational books from many aspects such as religion motivational books, business motivational books, life motivational books which give a positive impact and inspire me to have a good life. Next, the mystery genre is also a famous one, which some of the books can give me goosebumps when I read it due to the shocking storyline and plot twist and there are lots of books titles that I would like to recommend for you to read. Furthermore, there are also poetry books that I love to read and one of my favourite books of the poetry genre is Self Love Poetry: For Thinkers & Fellers by Melody Godfred. Hence, I would recommend this poetry book for who have problems in lacking self-love because from my personal experiences, this book really inspired me to love myself first before anyone else, which helps me to heal myself. Below are the lists of all my favourite and recommended books for each genres.</p>
+        <h4>My lists of favourite romance genre books:</h4>
+          <ul>
+            <li><b>It Ends With Us</b> by Collen Hoover.</li>
+            <li><b>You've Reached Sam</b> by Dustin Thao.</li>
+            <li><b>The Secret Bridesmaid</b> by Katie Birchall.</li>
+            <li><b>Opposite of Always</b> by Justin A Reynolds</li>
+            <li><b>The Upside Down of Falling</b> by Alex Light</li>
+          </ul>
+        <h4>My lists of favourite inspirational genre books:</h4>
+          <ul>
+            <li><b>You are Loved</b> by Mizi Wahid.</li>
+            <li><b>Revive Your Heart: putting life in Perspectives</b> by Nouman Ali Khan.</li>
+            <li><b>Inspiring Entrepreneur: 10 Successs From The World of Bysiness Stories and Lessons to Help You Succeed</b> by Lars De Veer.</li>
+            <li><b>Strategy to Success: How to Lead a Successful Life</b> by Steve Van Gard.</li>
+          </ul>
+        <h4>My lists of favourite mystery genre books:</h4>
+          <ul>
+            <li><b>The Girl On The Train</b> by Paula Hawkins.</li>
+            <li><b>The Silent Patient</b> by Alex Michaelides.</li>
+            <li><b>Eight Perfect Murders: Peter Swanson</b> by Lars De Veer.</li>
+            <li><b>Last Seen Alive</b> by Dorothy Simpson.</li>
+            <li><b>Keep This to Yourself</b> by Tom Ryan.</li>
+          </ul>
+        <h4>My lists of favourite poetry genre books:</h4>
+          <ul>
+            <li><b>Self Love Poetry: For Thinkers & Fellers</b> by Melody Godfred.</li>
+            <li><b>Milk and Honey</b> by Rupi Kaur.</li>
+            <li><b>The Sun and Her Flowers</b> by Rupi Kaur.</li>
+            <li><b>Dear You: A Collection of Poetry</b> by Liana Monique.</li>
+            <li><b>Out of the Weeds</b> by Heather D. Pease.</li>
+          </ul>
+
+    <h3>Colouring</h3>
+      <p>My second hobby is colouring even thought I am not very fluent with my drawing skill, but I do enjoy colouring. Today, there are lots of adult colouring books that allow me to freely colour the image either by using pencil colours, watercolour, crayons and so on. Not only that, nowadays there are also painting by numbers on canvas that are sold via offline and online shop, where I can colour the picture that I want by using the watercolor that have been given. The uniqueness of this canvas painting by number is the watercolor have different numbers for different colour which these colours is represent the colours that used in the picture. Therefore, I can simply colouring the picture according to the numbers which helps me to feel calm and not feel pressured in thinking of what colour that I should use to make the picture looks interesting because all the colours have been set already. Not to forget, this canvas painting by numbers also have their own level consisting of beginners level (small size of canvassing), intermediate level (medium size of canvas) and lastly is advanced level (big size of canvas). Thus, I highly recommend you to choose the small one if you are trying this canvas painting by numbers for the first time, because the bigger the canvas, the more small elements to colour which I personally think this might hard for some beginners. Next, below is the lists of adult colouring books that I recommend to you to buy.</p>
+        <h4>Recommended adult colouring books:</h4>
+          <ul class="a" type="circle">
+            <li><b>Adult Colouring Books Art Therapy: Anti-Stress Colouring Book for Adults</b> by Emma Bloom.</li>
+            <li><b>Secret Garden: An Iny Treasure Hunt and Colouring Book</b> by Johanna Basford.</li>
+            <li><b>The Magic of Flowers</b> Alexandra Dannenmann.</li>
+            <li><b>World Travel Adult Colouring Book: Passport to the World Collection</b> by Liana Monique.</li>
+          </ul>
+        <h4>Recommended painting by numbers online shops to buy:</h4>
+          <ul type="circle">
+            <li><b>MeTime Art &#128073</b><a href="https://www.metimeart.com/" target="_blank">Visit MeArt Time Website!</a></li>
+            <li><b>Paint by Numbers &#128073</b><a href="https://paintbynumbers.sale/" target="_blank">Visit Paint by Numbers Website!</a></li>
+          </ul>
+
+    <h3>Business</h3>
+      <p>My third hobby is doing business. I started my online business journey in 2020 starting as a dropship, mini agent, agent, and part time worker at a business company. Honestly, I am not expecting my business journey will continue until now, which I am proud of myself because I managed to manage my business schedule as a student schedule as well within more than 1 years. I agree that doing business is hard, but as long as you have a passion and interest in the product and service that you provide to your customers, everything will be easy. As an example, I enjoy writing planner every year so I decided to sell planner as a beginner's business journey. Consequently, I feel motivated to consistently promote as I love the products. Next, I also enjoy learning new business knowledge from other sellers and entrepreneurs from social media as I can use that knowledge and apply it in my business strategy. To conclude, not everyone has this business interest, or it is just only a temporary interest. Thus, in order to consistently have this interest, I would like to remind and give some advice for you in which you have to make sure that  you are already preparing mentally and physically, have enough motivation and full courage in starting the business journey. Otherwise, your business journey will not be successful. Below are the lists of products that I have sold since 2020.</p>
+        <h4>Lists of products that I have sold since 2020:</h4>
+          <ul type="square">
+            <li><b>Planner books</b> by Syabab brand.</li>
+            <li><b>Calendars</b> by Syabab brand.</li>
+            <li><b>Planner books</b> by Mirasya/Urbancollab brand.</li>
+            <li><b>Personalised thermos</b> by Kakfit brand.</li>
+          </ul>
+        <br>  
+    
+    <!--Skills-->
+    <h2>My Skills</h2>
+        <h4 style="text-align: center">Creativity</h4>
+          <div class="container">
+              <div class="skills creativity">90%</div>
+          </div>
+        <h4 style="text-align: center">Teamwork Skills</h4>
+          <div class="container">
+              <div class="skills teamwork">85%</div>
+          </div> 
+        <h4 style="text-align: center">Problem Solving</h4>
+          <div class="container">
+            <div class="skills problemsolving">80%</div>
+          </div>
+        <h4 style="text-align: center">Communication Skills</h4>
+          <div class="container">
+            <div class="skills communication">75%</div>
+          </div>
+  </body>
+</html>
+
